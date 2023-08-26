@@ -34,7 +34,7 @@ namespace soulsync.Presentation.Controllers
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            if (user != null && BCrypt.Net.BCrypt.Verify(model.Senha, user.Senha)) // Verifica a senha com BCrypt
+            if (user != null && BCrypt.Net.BCrypt.Verify(model.Senha, user.Senha)) 
             {
                 var chaveSecreta = configuration.GetSection("AppSettings")["ChaveSecreta"];
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(chaveSecreta));
@@ -43,7 +43,7 @@ namespace soulsync.Presentation.Controllers
                 var token = new JwtSecurityToken(
                     issuer: "SOULSYNC",
                     audience: "SOULSYNC_CLIENT",
-                    expires: DateTime.UtcNow.AddHours(24), // Define o tempo de expiração do token
+                    expires: DateTime.UtcNow.AddHours(24), 
                     signingCredentials: creds,
                      claims: new[]
                       {
@@ -56,6 +56,8 @@ namespace soulsync.Presentation.Controllers
 
             return Unauthorized(new { Message = "Credenciais inválidas." });
         }
+
+
 
 
 

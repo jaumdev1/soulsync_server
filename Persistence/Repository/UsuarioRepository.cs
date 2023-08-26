@@ -7,6 +7,7 @@ namespace soulsync.Persistence.Repository
     {
         public UsuarioRepository(AppDbContext context) : base(context)
         {
+
         }
 
       

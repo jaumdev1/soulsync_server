@@ -6,4 +6,10 @@
         public string Descricao { get; set; }
         public List<int> OutrosAdministradoresIds { get; set; }
     }
+
+    public class PlaygroundModelInvite{
+        
+        public int PlaygroundId { get; set; }
+    
+    }
 }

@@ -11,6 +11,7 @@ namespace soulsync.Persistence
         public DbSet<Administrador> Administradores { get; set; }
         public DbSet<UsuarioPlayground> UsuariosPlayground { get; set; }
 
+        public DbSet<ConvitePlayground> ConvitesPlayground { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
     }
 }

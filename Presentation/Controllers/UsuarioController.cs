@@ -28,5 +28,7 @@ namespace soulsync.Presentation.Controllers
 
             return Ok(new { Message = "Usuário criado com sucesso.", UsuarioId = novoUsuarioId });
         }
+
+
     }
 }
